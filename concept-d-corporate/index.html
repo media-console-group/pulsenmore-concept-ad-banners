@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex,nofollow">
+<meta charset="UTF-8">
+<meta name="ad.size" content="width=300,height=600">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=300,initial-scale=1">
+<link rel="icon" href="data:,">
+<title>Pulsenmore Ltd. — Investor Relations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:wght@400;500&amp;family=Urbanist:wght@400;500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!--
+  Pulsenmore Ltd. — IR display banner, 300x600 — Concept D: Corporate site / brand-native.
+  Promotes: https://gracinting.github.io/pulsenmore-ir-concept/
+  Styled from the company's own CORPORATE website (https://www.pulsenmore.com), not the IR
+  landing page that Concepts A-C are built from: its white header + logo
+  lockup, heading/body fonts, palette, accent underline bars, button style
+  and footer strip. "Homepage in miniature": each slide is one module of the
+  corporate homepage. This build: 1 hero photo + navy panel -> 2 stat cards on the pale-blue band ->
+  3 image + text split -> 4 navy band with wave edge.
+  Module classes (m-hero / m-stats / m-split / m-band) and the shared parts
+  (d-stat, d-list, d-arrows) live in style.css; every colour is a :root token
+  filled from brand.json "corp". Re-module a slide if the site has no such
+  module. Photos are the site's own photography, cropped into assets/;
+  assets/logo.png is the site's own logo file (home-ultrasound-logo.png). Every claim comes from the
+  project fact sheet (.tmp/facts.md).
+-->
+
+<div id="banner" aria-label="Pulsenmore Ltd. investor relations advertisement">
+
+  <div id="slides">
+
+    <!-- Slide 1 — Overview -->
+    <section class="slide m-hero" data-index="0">
+      <!-- Module: corporate homepage hero (pulsenmore.com home): the hero photo of a woman scanning at home with a
+           clinician on a laptop, fading into the site's navy band with the serif tagline.
+           Facts: [HOME][IR] tagline; [20-F 4.B via IR page] 35% of U.S. counties are maternity care deserts (March of Dimes, as cited);
+           [20-F] app-guided scan under 5 minutes (company says). -->
+      <img class="d-photo" src="assets/slide-1.jpg" alt="A pregnant woman scanning herself at home with the Pulsenmore device while a clinician reviews the scan on a laptop">
+      <span class="d-illus">Illustrative image</span>
+      <div class="hero-panel">
+        <h2>A healthy pregnancy shouldn’t depend on geography.</h2>
+        <p class="hero-desc">A hand-sized ultrasound docks with her phone. She scans at home; a clinician reviews the scan.</p>
+        <div class="d-stats">
+          <div class="d-stat">
+            <p class="d-value">35%</p>
+            <p class="d-label">of U.S. counties are maternity care deserts (March of Dimes, as cited)</p>
+          </div>
+          <div class="d-stat">
+            <p class="d-value">&lt;5 min</p>
+            <p class="d-label">app-guided scan, per the company</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 2 — Evidence -->
+    <section class="slide m-stats" data-index="1">
+      <!-- Module: corporate homepage "Technology impact" cards (white rounded cards, coral Literata values) on the
+           site's pale-blue band (the "Remote assessment of fetal well-being" band).
+           Facts: [20-F 4.B via IR page] HOLA: 188 enrolled, 162 analyzed, four U.S. centers; heart rate seen 99.2% / 97.2% (targets above 90% / 80%, met);
+           fluid specificity 80.0% / 91.6% (above 70%, met); fluid sensitivity 69.3% / 49.3% (70%, not met);
+           FDA de novo, Oct 31, 2025, covers fetal heart rate per the 20-F. -->
+      <div class="stats-head">
+        <h2>Pivotal study: heart rate met, fluid sensitivity not.</h2>
+        <p>HOLA, 162 women analyzed at four U.S. centers. Per the company’s 20-F, its FDA de novo authorization (Oct 31, 2025) covers fetal heart rate.</p>
+      </div>
+      <div class="d-stats">
+        <div class="d-stat">
+          <p class="d-value">99.2% <span class="d-vs">and</span> 97.2%</p>
+          <p class="d-label">Fetal heart rate visualized, clinician- and app-guided. Targets met</p>
+        </div>
+        <div class="d-stat">
+          <p class="d-value">80.0% <span class="d-vs">and</span> 91.6%</p>
+          <p class="d-label">Amniotic fluid specificity, clinician- and app-guided. Target met</p>
+        </div>
+        <div class="d-stat miss">
+          <p class="d-value">69.3% <span class="d-vs">and</span> 49.3%</p>
+          <p class="d-label">Amniotic fluid sensitivity, against a 70% target. Not met</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 3 — Platform -->
+    <section class="slide m-split" data-index="2">
+      <!-- Module: corporate homepage "app-guided mode" image + text split: the site's own photo of a woman scanning with her
+           phone, over a white card with a serif navy heading, bullets and arrow sub-bullets.
+           Facts: [20-F 4.B via IR page] cradle holds transducer, five-step app-guided scan, clinician reviews or guides by video;
+           scans from week 14 of a single pregnancy; app-guided scan under 5 minutes (company says). -->
+      <figure class="split-fig">
+        <img class="split-photo" src="assets/slide-3.jpg" alt="Illustrative image: a pregnant woman on a couch looking at her phone during a home scan">
+        <figcaption>Illustrative image</figcaption>
+      </figure>
+      <div class="split-card">
+        <h2>How a scan works</h2>
+        <ul class="d-list">
+          <li>The phone docks in a cradle that holds the ultrasound transducer. The app guides a five-step scan.</li>
+        </ul>
+        <hr class="d-rule">
+        <ul class="d-list">
+          <li>A clinician reviews the scan, or guides it live by video.
+            <ul class="d-arrows">
+              <li>Scans from week 14 of a single pregnancy</li>
+              <li>App-guided scan under 5 minutes, per the company</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Slide 4 — Financials -->
+    <section class="slide m-band" data-index="3">
+      <!-- Module: corporate homepage navy band with wave edge and centred serif title (the "Collaborations &amp; recognitions" band).
+           Facts: [6-K Aug 31, 2026] H1 2026 unaudited NIS: revenue 6,080K vs 3,999K (+52%); operating loss 20,757K;
+           cash used in operations 17,571K; cash, equivalents and short-term deposits 69,764K at Jun 30;
+           [20-F note 15] Clalit about 93% of 2025 product revenue (computed); warrants carried as liabilities. -->
+      <svg class="band-wave" viewBox="0 0 300 30" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0H300V8C262 28 214 4 160 14S52 30 0 14Z" fill="#f9f8f8"/><path class="wave-line" d="M0 18C52 34 108 12 160 20S262 32 300 12" fill="none"/></svg>
+      <div class="band-content">
+        <h2>H1 2026: revenue up from a small base</h2>
+        <p class="band-desc">Six months to June 30, 2026. Unaudited, in New Israeli Shekels as filed.</p>
+        <div class="d-stats">
+          <div class="d-stat">
+            <p class="d-value">NIS 6.1M</p>
+            <p class="d-label">Revenue, vs NIS 4.0M in H1 2025 (+52%)</p>
+          </div>
+          <div class="d-stat">
+            <p class="d-value">NIS 20.8M</p>
+            <p class="d-label">Operating loss</p>
+          </div>
+          <div class="d-stat">
+            <p class="d-value">NIS 17.6M</p>
+            <p class="d-label">Cash used in operations</p>
+          </div>
+          <div class="d-stat">
+            <p class="d-value">NIS 69.8M</p>
+            <p class="d-label">Cash and deposits, Jun 30</p>
+          </div>
+        </div>
+        <p class="band-note">About 93% of 2025 product revenue came from one customer. Warrants are carried as liabilities.</p>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Persistent chrome — the corporate site's header, never rotates -->
+  <header id="top-bar" class="reveal" data-delay="0">
+    <img id="logo" src="assets/logo.png" alt="Pulsenmore Ltd." width="112" height="25">
+    <span id="ticker">NASDAQ:&nbsp;PLSM</span>
+  </header>
+
+  <!-- Slider controls: round navy buttons, like the homepage slider's pause control -->
+  <button type="button" class="nav-arrow" id="arrow-prev" aria-label="Previous slide">
+    <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 6 8l4 5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <button type="button" class="nav-arrow" id="arrow-next" aria-label="Next slide">
+    <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l4 5-4 5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  <div id="bottom-fixed" class="reveal" data-delay="4">
+    <div id="dots" role="tablist" aria-label="Slide selector">
+      <button class="dot active" data-index="0" aria-label="Slide 1: Overview"></button>
+      <button class="dot" data-index="1" aria-label="Slide 2: Pivotal study"></button>
+      <button class="dot" data-index="2" aria-label="Slide 3: How a scan works"></button>
+      <button class="dot" data-index="3" aria-label="Slide 4: H1 2026 financials"></button>
+    </div>
+
+    <!-- The corporate site's .btn: radius/gradient border from brand.json corp, arrow after the label -->
+    <a href="#" id="cta">
+      <span>Investor Relations</span>
+      <svg id="cta-arrow" viewBox="0 0 24 25" aria-hidden="true"><path d="M12 4.18066L10.585 5.59566L16.17 11.1807H4V13.1807H16.17L10.585 18.7657L12 20.1807L20 12.1807L12 4.18066Z"/></svg>
+    </a>
+
+    <!-- The corporate site's footer strip, carrying the required forward-looking-statements line -->
+    <p id="fls"><span>Forward-looking statements: U.S. launch and reimbursement, any wider FDA indication, funding needs, continued losses and reliance on one customer. Figures from the company’s 20-F and 6-K (NIS as filed; H1 2026 unaudited); third-party figures as cited. Warrants cover 3.1M shares (about 48% of the 6.5M outstanding at Mar 15, 2026) and are carried as liabilities. Not an offer. See SEC filings for risks.</span></p>
+  </div>
+
+  <!-- Standard HTML5-ad click-tag plumbing -->
+  <div id="click-tag-wrapper"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
